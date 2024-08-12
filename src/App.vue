@@ -22,31 +22,39 @@ async function runExample() {
 <template>
   <h1>pangu {{ pangu.version }}</h1>
   <p>
-    powered by
-    <a
-      href="https://github.com/vinta/pangu.js"
-      target="_blank"
-      rel="noreferrer noopener"
-      >vinta/pangu.js</a
-    >
+    This is a tool for adding spaces between CJK (Chinese, Japanese, Korean) and
+    English words. It helps improve readability of mixed-language text.
   </p>
+  <h2>How to Use</h2>
+  <ol>
+    <li>Enter your text in the input area below.</li>
+    <li>The result will appear in the output area.</li>
+  </ol>
   <p><a href="#" @click.prevent="runExample()">run example</a></p>
+  <h2>Input</h2>
   <textarea v-model="text" />
-  <p>result</p>
+  <h2>Output</h2>
   <pre><code class="transformed">{{ source }}</code></pre>
   <div v-if="text">
     <a href="#" @click.prevent="copy()">copy to clipboard</a>
     <span class="copied" v-if="copied">done!</span>
   </div>
+  <h2>Features</h2>
+  <ol>
+    <li>Adds spaces between CJK and English words</li>
+    <li>Supports Chinese, Japanese, and Korean</li>
+    <li>Preserves original formatting</li>
+  </ol>
+  <h2>About</h2>
   <p>
-    css
-    <a
-      href="https://watercss.kognise.dev/"
-      target="_blank"
-      rel="noreferrer noopener"
-    >
-      water.css
-    </a>
+    Pangu is powered by
+    <a href="https://github.com/vinta/pangu.js" rel="opopener noreferrer"
+      >vinta/pangu.js</a
+    >, a popular open-source library for text spacing. This demo uses water.css
+    for a clean, minimalist interface. For more information, visit the
+    <a href="https://github.com/vinta/pangu.js" rel="opopener noreferrer"
+      >pangu.js GitHub repository</a
+    >.
   </p>
 </template>
 
